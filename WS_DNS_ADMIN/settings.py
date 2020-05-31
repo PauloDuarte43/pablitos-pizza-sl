@@ -25,7 +25,7 @@ SECRET_KEY = 'rkc$$v*nze4q2$q3+rcjhba7&2g6^@fgq*k&1^!^iaz%u_7w)e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.pablitospizza.com.br', 'pablitospizza.com.br']
+ALLOWED_HOSTS = ['saoleopoldo.pablitospizza.com.br']
 
 
 # Application definition
