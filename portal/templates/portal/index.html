@@ -136,11 +136,19 @@
                                         </thead>
                                         <tbody>
                                             {% for s in schedules %}
-                                            <tr id="{{ s.day_week }}">
-                                                <td>{{ s.day_week_display_value }}</td>
-                                                <td>{{ s.from_hour|time:"H:i" }}</td>
-                                                <td>{{ s.to_hour|time:"H:i" }}</td>
-                                            </tr>
+
+					    {% if s.from_hour is None or s.to_hour is None %}
+					    <tr id="{{ s.day_week }}">
+						    <td>{{ s.day_week_display_value }}</td>
+						    <td colspan="2">Fechado</td>
+					    </tr>
+					    {% else %}
+					    <tr id="{{ s.day_week }}">
+						    <td>{{ s.day_week_display_value }}</td>
+						    <td>{{ s.from_hour|time:"H:i" }}</td>
+						    <td>{{ s.to_hour|time:"H:i" }}</td>
+					    </tr>
+					    {% endif %}
 
                                             {% endfor %}
                                         </tbody>

@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var amountScrolled = 300;
+    highlightDay();
 
     $(window).scroll(function() {
         if ($(window).scrollTop() > amountScrolled) {
@@ -16,7 +17,6 @@ $(document).ready(function() {
     });
 
     initMap();
-    highlightDay();
 
     $('.navbar-nav>li>a').on('click', function(){
             $('.navbar-collapse').collapse('hide');

@@ -60,8 +60,8 @@ class Schedules(models.Model):
     )
 
     day_week = models.IntegerField(choices=DAY_OF_THE_WEEK)
-    from_hour = models.TimeField()
-    to_hour = models.TimeField()
+    from_hour = models.TimeField(null=True, blank=True)
+    to_hour = models.TimeField(null=True, blank=True)
 
     def day_week_display_value(self):
         return dict(self.DAY_OF_THE_WEEK).get(self.day_week, '')
